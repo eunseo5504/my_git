@@ -1,1 +1,89 @@
 @import "tailwindcss";
+
+@theme {
+  --color-tertiary-fixed: #fce9c8;
+  --color-error: #9f403d;
+  --color-primary-fixed: #e5e2e1;
+  --color-surface-tint: #5f5e5e;
+  --color-on-secondary-container: #644f00;
+  --color-inverse-primary: #ffffff;
+  --color-surface: #f9f9f9;
+  --color-on-tertiary: #fff8f0;
+  --color-error-dim: #4e0309;
+  --color-surface-dim: #d4dbdd;
+  --color-surface-container-high: #e4e9ea;
+  --color-on-background: #2d3435;
+  --color-inverse-surface: #0c0f0f;
+  --color-on-error: #fff7f6;
+  --color-tertiary-dim: #5e5239;
+  --color-on-surface-variant: #5a6061;
+  --color-primary-fixed-dim: #d6d4d3;
+  --color-tertiary: #6b5d44;
+  --color-primary-container: #e5e2e1;
+  --color-on-tertiary-container: #62553c;
+  --color-secondary: #745c00;
+  --color-background: #f9f9f9;
+  --color-secondary-fixed: #ffe088;
+  --color-on-surface: #2d3435;
+  --color-on-tertiary-fixed: #4f432b;
+  --color-tertiary-fixed-dim: #eddbba;
+  --color-secondary-dim: #665100;
+  --color-outline-variant: #adb3b4;
+  --color-on-tertiary-fixed-variant: #6c5f45;
+  --color-on-primary: #faf7f6;
+  --color-secondary-fixed-dim: #f8d056;
+  --color-tertiary-container: #fce9c8;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-secondary-fixed-variant: #705900;
+  --color-on-primary-fixed-variant: #5c5b5b;
+  --color-on-error-container: #752121;
+  --color-outline: #757c7d;
+  --color-surface-bright: #f9f9f9;
+  --color-surface-container-highest: #dde4e5;
+  --color-error-container: #fe8983;
+  --color-inverse-on-surface: #9c9d9d;
+  --color-primary-dim: #535252;
+  --color-on-primary-fixed: #403f3f;
+  --color-surface-container: #ebeeef;
+  --color-secondary-container: #ffe088;
+  --color-on-primary-container: #525151;
+  --color-surface-container-low: #f2f4f4;
+  --color-on-secondary: #fff8ef;
+  --color-primary: #5f5e5e;
+  --color-surface-variant: #dde4e5;
+  --color-on-secondary-fixed: #4e3d00;
+
+  --font-headline: "Manrope", sans-serif;
+  --font-body: "Manrope", sans-serif;
+  --font-label: "Manrope", sans-serif;
+  --font-sans: "Manrope", sans-serif;
+
+  --radius-DEFAULT: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-full: 0.75rem;
+}
+
+@layer base {
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  body {
+    font-family: 'Manrope', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    @apply bg-surface text-on-surface;
+  }
+}
+
+@layer components {
+  .glass-effect {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .tonal-shift {
+    @apply bg-stone-100/50 dark:bg-stone-900/50;
+  }
+}
